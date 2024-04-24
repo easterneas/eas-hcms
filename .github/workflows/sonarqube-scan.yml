@@ -1,4 +1,4 @@
-name: \[Main] SonarQube - Code Quality Scanning
+name: "[Main] SonarQube - Code Quality Scanning"
 
 on:
   push:
