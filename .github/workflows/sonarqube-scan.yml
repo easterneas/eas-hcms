@@ -1,9 +1,9 @@
-name: Build
+name: \[Main] SonarQube - Code Quality Scanning
 
 on:
   push:
     branches:
-      - '**'
+      - main
 
 
 jobs:
