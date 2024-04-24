@@ -17,6 +17,9 @@ jobs:
       - name: check docker context
         run: /usr/bin/docker context inspect
       - uses: easterneas/sonarqube-scan-action@master
+        with:
+          args: >
+            -Dsonar.projectKey=easterneas_eas-hcms_AY8QpnE-ROdyrQH6PoQF
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_STAGING_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_STAGING_HOST_URL }}
