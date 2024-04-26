@@ -21,7 +21,8 @@ jobs:
           # args: >
           #  -Dsonar.projectKey=easterneas_eas-hcms_AY8QpnE-ROdyrQH6PoQF
           args: >
-            -Dsonar.projectKey=${{ github.event.repository.name }} 
+            -Dsonar.projectKey=${{ github.event.repository.name }}
+            -Dsonar.branch.name=deploy
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_STAGING_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_STAGING_HOST_URL }}
