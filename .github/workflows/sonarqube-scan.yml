@@ -3,7 +3,7 @@ name: "[Main] SonarQube - Code Quality Scanning"
 on:
   push:
     branches:
-      - main
+      - master
 
 
 jobs:
@@ -18,10 +18,8 @@ jobs:
         run: /usr/bin/docker context inspect
       - uses: easterneas/sonarqube-scan-action@master
         with:
-          # args: >
-          #  -Dsonar.projectKey=easterneas_eas-hcms_AY8QpnE-ROdyrQH6PoQF
           args: >
-            -Dsonar.projectKey=${{ github.event.repository.name }}
+            -Dsonar.projectKey=easterneas_eas-hcms_AY8QpnE-ROdyrQH6PoQF
             -Dsonar.branch.name=deploy
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_STAGING_TOKEN }}
